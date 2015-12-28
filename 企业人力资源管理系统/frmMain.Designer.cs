@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("销售经理信息");
             System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("技术总监信息");
             System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("经理信息", new System.Windows.Forms.TreeNode[] {
@@ -51,10 +52,12 @@
             treeNode10,
             treeNode11});
             System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("员工信息查询");
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.trvMain = new System.Windows.Forms.TreeView();
             this.lblTitle = new System.Windows.Forms.Label();
+            this.trvMain = new System.Windows.Forms.TreeView();
             this.splitter1 = new System.Windows.Forms.Splitter();
+            this.imgLstTree = new System.Windows.Forms.ImageList(this.components);
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,10 +71,23 @@
             this.panel1.Size = new System.Drawing.Size(1016, 102);
             this.panel1.TabIndex = 2;
             // 
+            // lblTitle
+            // 
+            this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("宋体", 22F);
+            this.lblTitle.Location = new System.Drawing.Point(258, 43);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(493, 30);
+            this.lblTitle.TabIndex = 0;
+            this.lblTitle.Text = "企业人力资源管理系统——工资管理";
+            // 
             // trvMain
             // 
             this.trvMain.Dock = System.Windows.Forms.DockStyle.Left;
             this.trvMain.Font = new System.Drawing.Font("宋体", 15F);
+            this.trvMain.ImageIndex = 0;
+            this.trvMain.ImageList = this.imgLstTree;
             this.trvMain.Location = new System.Drawing.Point(0, 102);
             this.trvMain.Name = "trvMain";
             treeNode1.Name = "节点3";
@@ -104,20 +120,10 @@
             treeNode6,
             treeNode12,
             treeNode13});
+            this.trvMain.SelectedImageIndex = 1;
             this.trvMain.Size = new System.Drawing.Size(212, 561);
             this.trvMain.TabIndex = 5;
             this.trvMain.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.trvMain_AfterSelect);
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("宋体", 22F);
-            this.lblTitle.Location = new System.Drawing.Point(258, 43);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(493, 30);
-            this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "企业人力资源管理系统——工资管理";
             // 
             // splitter1
             // 
@@ -126,6 +132,13 @@
             this.splitter1.Size = new System.Drawing.Size(3, 561);
             this.splitter1.TabIndex = 6;
             this.splitter1.TabStop = false;
+            // 
+            // imgLstTree
+            // 
+            this.imgLstTree.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imgLstTree.ImageStream")));
+            this.imgLstTree.TransparentColor = System.Drawing.Color.Transparent;
+            this.imgLstTree.Images.SetKeyName(0, "126-File.ico");
+            this.imgLstTree.Images.SetKeyName(1, "78-Opened-Folder.ico");
             // 
             // frmMain
             // 
@@ -152,6 +165,7 @@
         private System.Windows.Forms.TreeView trvMain;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Splitter splitter1;
+        private System.Windows.Forms.ImageList imgLstTree;
 
     }
 }
