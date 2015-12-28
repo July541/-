@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{93D6D4BA-0D36-4CDB-B978-4430C5DF6574}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>企业人力资源管理系统</RootNamespace>
+    <AssemblyName>企业人力资源管理系统</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmInfoSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInfoSelect.Designer.cs">
+      <DependentUpon>frmInfoSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSalaryTech.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSalaryTech.Designer.cs">
+      <DependentUpon>frmSalaryTech.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmManagerInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManagerInfo.Designer.cs">
+      <DependentUpon>frmManagerInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSalaryInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSalaryInfo.Designer.cs">
+      <DependentUpon>frmSalaryInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSalaryManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSalaryManager.Designer.cs">
+      <DependentUpon>frmSalaryManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSalarySell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSalarySell.Designer.cs">
+      <DependentUpon>frmSalarySell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSalarySellManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSalarySellManager.Designer.cs">
+      <DependentUpon>frmSalarySellManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSalaryTechManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSalaryTechManager.Designer.cs">
+      <DependentUpon>frmSalaryTechManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelected.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelected.Designer.cs">
+      <DependentUpon>frmSelected.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSeller.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSeller.Designer.cs">
+      <DependentUpon>frmSeller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSellManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSellManager.Designer.cs">
+      <DependentUpon>frmSellManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmScan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmScan.Designer.cs">
+      <DependentUpon>frmScan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTecher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTecher.Designer.cs">
+      <DependentUpon>frmTecher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTechManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTechManager.Designer.cs">
+      <DependentUpon>frmTechManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmInfoSelect.resx">
+      <DependentUpon>frmInfoSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManagerInfo.resx">
+      <DependentUpon>frmManagerInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSalaryInfo.resx">
+      <DependentUpon>frmSalaryInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSalaryManager.resx">
+      <DependentUpon>frmSalaryManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSalarySell.resx">
+      <DependentUpon>frmSalarySell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSalarySellManager.resx">
+      <DependentUpon>frmSalarySellManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSalaryTech.resx">
+      <DependentUpon>frmSalaryTech.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSalaryTechManager.resx">
+      <DependentUpon>frmSalaryTechManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelected.resx">
+      <DependentUpon>frmSelected.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSeller.resx">
+      <DependentUpon>frmSeller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSellManager.resx">
+      <DependentUpon>frmSellManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmScan.resx">
+      <DependentUpon>frmScan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTecher.resx">
+      <DependentUpon>frmTecher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTechManager.resx">
+      <DependentUpon>frmTechManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
