@@ -38,6 +38,7 @@ namespace 企业人力资源管理系统
             {
                 if (scan.save(dt))
                 {
+                    MessageBox.Show(dt.Rows[1]["F0102"].ToString());
                     MessageBox.Show("保存成功！", "提示");
                 }
             }
@@ -78,6 +79,8 @@ namespace 企业人力资源管理系统
                 Scan scan = new Scan();
                 scan.delete(where);
                 this.dgvMain.Rows.Remove(row);
+                dt.Rows.Remove(dt.Rows[CurrentRowIndex]);
+                MessageBox.Show(dgvMain.Rows.Count.ToString());
             }
         }
 

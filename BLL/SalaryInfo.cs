@@ -5,16 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SQLite;
-using Model;
 
 namespace BLL
 {
-    public class Scan : bascial
+    public class SalaryInfo : bascial
     {
         public override DataSet show()
         {
-            T01 t01 = new T01();
-            string sqlstr = "select * from T01 ";
+            string sqlstr = "select * from T02 ";
             SQLiteConnection sqlcon = new SQLiteConnection(connectionString);
             SQLiteCommand sqlcmd = new SQLiteCommand();
             sqlcmd.CommandText = sqlstr;
@@ -29,23 +27,7 @@ namespace BLL
 
         public override bool save(DataTable dt)
         {
-            string sqlstr = "select * from T01";
-            for (int i = 0; i < dt.Rows.Count ; i++)
-            {
-                string sqlstr2 = string.Format("insert into T02 (F0201, F0101, F0202) values ({0}, {1}, '{2}')", dt.Rows[i]["F0101"], dt.Rows[i]["F0101"], dt.Rows[i]["F0102"]);
-                SQLiteConnection sqlcon = new SQLiteConnection(connectionString);
-                SQLiteCommand sqlcmd = new SQLiteCommand();
-                sqlcmd.CommandText = sqlstr2;
-                sqlcmd.Connection = sqlcon;
-                sqlcon.Open();
-                try
-                {
-                    sqlcmd.ExecuteNonQuery();
-                }
-                catch
-                { }
-                sqlcon.Close();
-            }
+            string sqlstr = "select * from T02";
             SQLiteDataAdapter dataAdapter = new SQLiteDataAdapter(sqlstr, connectionString);
             SQLiteCommandBuilder commandBulider = new SQLiteCommandBuilder(dataAdapter);
             dataAdapter.Update(dt);
@@ -59,7 +41,7 @@ namespace BLL
 
         public override bool delete(string where)
         {
-            string sqlstr = "delete from T01 where F0101 = '" + where + "'";
+            string sqlstr = "delete from T02 where F0201 = '" + where + "'";
             SQLiteConnection sqlcon = new SQLiteConnection(connectionString);
             SQLiteCommand sqlcmd = new SQLiteCommand();
             sqlcmd.CommandText = sqlstr;

@@ -45,11 +45,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="base.cs" />
+    <Compile Include="InfoSelect.cs" />
     <Compile Include="ManagerInfo.cs" />
     <Compile Include="ManagerSell.cs" />
     <Compile Include="ManagerTech.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SalaryInfo.cs" />
+    <Compile Include="SalaryManager.cs" />
+    <Compile Include="SalarySell.cs" />
+    <Compile Include="SalarySellManager.cs" />
+    <Compile Include="SalaryTech.cs" />
+    <Compile Include="SalaryTechManager.cs" />
     <Compile Include="scan.cs" />
+    <Compile Include="Seller.cs" />
+    <Compile Include="Techer.cs" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

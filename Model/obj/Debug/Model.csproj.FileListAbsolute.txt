@@ -2,3 +2,4 @@ H:\MyC\Csharp\企业人力资源管理系统\SalaryManage\Model\bin\Debug\Model.
 H:\MyC\Csharp\企业人力资源管理系统\SalaryManage\Model\bin\Debug\Model.pdb
 H:\MyC\Csharp\企业人力资源管理系统\SalaryManage\Model\obj\Debug\Model.dll
 H:\MyC\Csharp\企业人力资源管理系统\SalaryManage\Model\obj\Debug\Model.pdb
+H:\MyC\Csharp\企业人力资源管理系统\SalaryManage\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache

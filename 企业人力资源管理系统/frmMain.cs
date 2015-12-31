@@ -83,10 +83,6 @@ namespace 企业人力资源管理系统
             {
                 frm = new frmSalaryTech();
             }
-            else if (text == "员工信息查询")
-            {
-                frm = new frmInfoSelect();
-            }
             frm.Text = text;
             frm.MdiParent = this;
             frm.Dock = DockStyle.Fill;
@@ -97,6 +93,13 @@ namespace 企业人力资源管理系统
 
         private void trvMain_AfterSelect(object sender, TreeViewEventArgs e)
         {
+            if(trvMain.SelectedNode.Text == "员工信息查询")
+            {
+                frmInfoSelect frm = new frmInfoSelect();
+                frm.Show();
+                frm.Activate();
+                return;
+            }
             showForm(trvMain.SelectedNode.Text);
         }
     }

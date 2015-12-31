@@ -16,5 +16,7 @@ namespace BLL
         public abstract bool update();
         public abstract bool delete(string where);
         public static string connectionString = "Data Source = ./SalaryManage.db;";
+
+
     }
 }
