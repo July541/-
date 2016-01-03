@@ -44,7 +44,7 @@ namespace 企业人力资源管理系统
                 }
                 else
                 {
-                    MessageBox.Show("查无此人！");
+                    MessageBox.Show("查无此人！", "提示");
                 }
             }
             else if(txtNumber.Text == "")
@@ -55,7 +55,7 @@ namespace 企业人力资源管理系统
                 }
                 else
                 {
-                    MessageBox.Show("查无此人！");
+                    MessageBox.Show("查无此人！", "提示");
                 }
             }
             else
@@ -66,7 +66,7 @@ namespace 企业人力资源管理系统
                 }
                 else
                 {
-                    MessageBox.Show("查无此人！");
+                    MessageBox.Show("查无此人！", "提示");
                 }
             }
         }

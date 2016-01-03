@@ -16,6 +16,7 @@ namespace 企业人力资源管理系统
     {
         //List<T01> lst = new List<T01>();
         DataTable dt = new DataTable();
+        Global g = new Global();
         private int CurrentRowIndex { get; set; }
         public frmScan()
         {
@@ -38,8 +39,12 @@ namespace 企业人力资源管理系统
             {
                 if (scan.save(dt))
                 {
-                    MessageBox.Show(dt.Rows[1]["F0102"].ToString());
+                    //MessageBox.Show(dt.Rows[1]["F0102"].ToString());
                     MessageBox.Show("保存成功！", "提示");
+                }
+                else
+                {
+                    MessageBox.Show("编号已存在！", "提示");
                 }
             }
        
@@ -53,6 +58,16 @@ namespace 企业人力资源管理系统
             if (dgvMain.Rows[row].Cells[1].Value.ToString() == "")
             {
                 MessageBox.Show("姓名输入不能为空！", "提示");
+                return false;
+            }
+            //if (!g.dateCheck(Convert.ToString(dgvMain.Rows[row].Cells[4].Value)))
+            //{
+            //    MessageBox.Show("日期输入格式不正确！", "提示");
+            //    return false;
+            //}
+            if (!g.ageCheck(dgvMain.Rows[row].Cells[2].Value.ToString()))
+            {
+                MessageBox.Show("年龄输入不合法！", "提示");
                 return false;
             }
             return true;
