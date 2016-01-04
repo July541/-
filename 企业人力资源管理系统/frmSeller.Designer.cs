@@ -36,8 +36,6 @@
             this.panBg = new System.Windows.Forms.Panel();
             this.panMain = new System.Windows.Forms.Panel();
             this.dgvMain = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnSave = new System.Windows.Forms.Button();
             this.clmnF0101 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmnF0102 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmnF0108 = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -46,6 +44,8 @@
             this.clmnF0105 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.clmnF0106 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.clmnF0107 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnSave = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.删除记录ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panTop.SuspendLayout();
@@ -131,27 +131,7 @@
             this.dgvMain.Size = new System.Drawing.Size(851, 408);
             this.dgvMain.TabIndex = 2;
             this.dgvMain.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvMain_CellMouseDown);
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.btnSave);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 408);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(851, 93);
-            this.panel1.TabIndex = 1;
-            // 
-            // btnSave
-            // 
-            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSave.Font = new System.Drawing.Font("宋体", 15F);
-            this.btnSave.Location = new System.Drawing.Point(638, 19);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(150, 49);
-            this.btnSave.TabIndex = 0;
-            this.btnSave.Text = "保存";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.dgvMain.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dgvMain_DataError);
             // 
             // clmnF0101
             // 
@@ -214,6 +194,27 @@
             this.clmnF0107.DataPropertyName = "F0107";
             this.clmnF0107.HeaderText = "联系方式";
             this.clmnF0107.Name = "clmnF0107";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnSave);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 408);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(851, 93);
+            this.panel1.TabIndex = 1;
+            // 
+            // btnSave
+            // 
+            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSave.Font = new System.Drawing.Font("宋体", 15F);
+            this.btnSave.Location = new System.Drawing.Point(638, 19);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(150, 49);
+            this.btnSave.TabIndex = 0;
+            this.btnSave.Text = "保存";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // contextMenuStrip1
             // 

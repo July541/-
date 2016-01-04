@@ -121,6 +121,7 @@
             this.dgvMain.Size = new System.Drawing.Size(851, 408);
             this.dgvMain.TabIndex = 2;
             this.dgvMain.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvMain_CellMouseDown);
+            this.dgvMain.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dgvMain_DataError);
             // 
             // clmnF0101
             // 

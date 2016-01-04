@@ -16,6 +16,7 @@ namespace 企业人力资源管理系统
     {
         //List<T01> lst = new List<T01>();
         DataTable dt = new DataTable();
+        Global g = new Global();
         private int CurrentRowIndex { get; set; }
         public frmScan()
         {
@@ -36,13 +37,23 @@ namespace 企业人力资源管理系统
             }
             if (temp == true)
             {
-                if (scan.save(dt))
+                try
                 {
-                    MessageBox.Show(dt.Rows[1]["F0102"].ToString());
+                    scan.save(dt);
                     MessageBox.Show("保存成功！", "提示");
                 }
-            }
-       
+                catch (Exception ex)
+                {
+                    if (ex.Message.Length == 45)
+                    {
+                        MessageBox.Show("编号已存在！", "提示");
+                    }
+                    else
+                    {
+                        MessageBox.Show("输入错误！", "提示");
+                    }
+                }
+            } 
         }
         /// <summary>
         /// dataGridView 输入验证。
@@ -54,6 +65,11 @@ namespace 企业人力资源管理系统
             {
                 MessageBox.Show("姓名输入不能为空！", "提示");
                 return false;
+            }
+            if (dgvMain.Rows[row].Cells[2].Value.ToString() != "" && !g.ageCheck(dgvMain.Rows[row].Cells[2].Value.ToString()))
+            {
+                MessageBox.Show("年龄输入错误！", "提示");
+                return false ;
             }
             return true;
         }
@@ -80,7 +96,6 @@ namespace 企业人力资源管理系统
                 scan.delete(where);
                 this.dgvMain.Rows.Remove(row);
                 dt.Rows.Remove(dt.Rows[CurrentRowIndex]);
-                MessageBox.Show(dgvMain.Rows.Count.ToString());
             }
         }
 
@@ -115,6 +130,18 @@ namespace 企业人力资源管理系统
             //        );
             //}
             this.dgvMain.DataSource = dt;
+        }
+
+        private void dgvMain_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            if (e.Exception.Message.Length == 12)
+            {
+                MessageBox.Show("应输入数字！", "警告", MessageBoxButtons.OK);
+            }
+            else
+            {
+                MessageBox.Show("日期格式错误，参照YYYY-MM-DD输入", "警告", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

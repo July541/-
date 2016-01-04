@@ -14,6 +14,7 @@ namespace 企业人力资源管理系统
     public partial class frmSeller : Form
     {
         DataTable dt = new DataTable();
+        Global g = new Global();
         private int CurrentRowIndex { get; set; }
         public frmSeller()
         {
@@ -35,11 +36,50 @@ namespace 企业人力资源管理系统
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            bool temp = true;
             Seller man = new Seller();
-            if (man.save(dt))
+            for (int i = 0; i < dgvMain.RowCount - 1; i++)
             {
-                MessageBox.Show("保存成功！");
+                if (isNull(i) == false)
+                {
+                    temp = false;
+                    break;
+                }
             }
+            if (temp == true)
+            {
+                try
+                {
+                    man.save(dt);
+                    MessageBox.Show("保存成功！", "提示");
+                }
+                catch (Exception ex)
+                {
+                    if (ex.Message.Length == 45)
+                    {
+                        MessageBox.Show("编号已存在！", "提示");
+                    }
+                    else
+                    {
+                        MessageBox.Show("输入错误！", "提示");
+                    }
+                }
+            }
+        }
+
+        private bool isNull(int row)
+        {
+            if (dgvMain.Rows[row].Cells[1].Value.ToString() == "")
+            {
+                MessageBox.Show("姓名输入不能为空！", "提示");
+                return false;
+            }
+            if (dgvMain.Rows[row].Cells[2].Value.ToString() != "" && !g.ageCheck(dgvMain.Rows[row].Cells[2].Value.ToString()))
+            {
+                MessageBox.Show("年龄输入错误！", "提示");
+                return false;
+            }
+            return true;
         }
 
         private void 删除记录ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -62,6 +102,18 @@ namespace 企业人力资源管理系统
             {
                 this.contextMenuStrip1.Show(MousePosition.X, MousePosition.Y);
                 CurrentRowIndex = e.RowIndex;
+            }
+        }
+
+        private void dgvMain_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            if (e.Exception.Message.Length == 12)
+            {
+                MessageBox.Show("应输入数字！", "警告", MessageBoxButtons.OK);
+            }
+            else
+            {
+                MessageBox.Show("日期格式错误，参照YYYY-MM-DD输入", "警告", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }
