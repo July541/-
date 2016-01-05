@@ -116,6 +116,5 @@ namespace 企业人力资源管理系统
                 this.dgvMain.Rows.Remove(row);
             }
         }
-
     }
 }

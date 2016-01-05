@@ -43,6 +43,33 @@ namespace BLL
                 return false;
         }
 
+        public DataSet show(string str, string where, int number)
+        {
+            string sqlstr = null;
+            if (str == "number")
+            {
+                sqlstr = "select * from T02 where F0101 = '" + number + "'";
+            }
+            if (str == "string")
+            {
+                sqlstr = "select * from T02 where F0202 = '" + where + "'";
+            }
+            if (str == "both")
+            {
+                sqlstr = "select * from T02 where F0101 = '" + number + "' and F0202 = '" + where + "'";
+            }
+            SQLiteConnection sqlcon = new SQLiteConnection(connectionString);
+            SQLiteCommand sqlcmd = new SQLiteCommand();
+            sqlcmd.CommandText = sqlstr;
+            sqlcmd.Connection = sqlcon;
+            sqlcon.Open();
+            SQLiteDataAdapter da = new SQLiteDataAdapter(sqlcmd);
+            DataSet ds = new DataSet();
+            da.Fill(ds, "table");
+            sqlcon.Close();
+            return ds;
+        }
+
         public bool ismatch(string str)
         {
             string regextext = @"^(-?\d+)(\.\d+)?$";

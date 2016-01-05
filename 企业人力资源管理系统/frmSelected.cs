@@ -16,5 +16,10 @@ namespace 企业人力资源管理系统
         {
             InitializeComponent();
         }
+
+        private void frmSelected_Activated(object sender, EventArgs e)
+        {
+
+        }
     }
 }

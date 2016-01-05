@@ -31,12 +31,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvMain = new System.Windows.Forms.DataGridView();
-            this.panTop = new System.Windows.Forms.Panel();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.panBg = new System.Windows.Forms.Panel();
-            this.panMain = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnSave = new System.Windows.Forms.Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,6 +40,12 @@
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panTop = new System.Windows.Forms.Panel();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.panBg = new System.Windows.Forms.Panel();
+            this.panMain = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnSave = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMain)).BeginInit();
             this.panTop.SuspendLayout();
             this.panBg.SuspendLayout();
@@ -88,6 +88,61 @@
             this.dgvMain.RowTemplate.Height = 23;
             this.dgvMain.Size = new System.Drawing.Size(851, 408);
             this.dgvMain.TabIndex = 2;
+            this.dgvMain.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dgvMain_EditingControlShowing);
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.HeaderText = "编号";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.HeaderText = "姓名";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column3.HeaderText = "实发工资";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column4.HeaderText = "基本工资";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column5.HeaderText = "奖金";
+            this.Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column6.HeaderText = "扣发工资";
+            this.Column6.Name = "Column6";
+            // 
+            // Column7
+            // 
+            this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column7.HeaderText = "销售额";
+            this.Column7.Name = "Column7";
+            // 
+            // Column8
+            // 
+            this.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column8.HeaderText = "提成比例";
+            this.Column8.Name = "Column8";
+            // 
+            // Column9
+            // 
+            this.Column9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column9.HeaderText = "职务津贴";
+            this.Column9.Name = "Column9";
             // 
             // panTop
             // 
@@ -149,60 +204,6 @@
             this.btnSave.Text = "保存";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column1.HeaderText = "编号";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column2.HeaderText = "姓名";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column3.HeaderText = "实发工资";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column4.HeaderText = "基本工资";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column5.HeaderText = "奖金";
-            this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column6.HeaderText = "扣发工资";
-            this.Column6.Name = "Column6";
-            // 
-            // Column7
-            // 
-            this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column7.HeaderText = "销售额";
-            this.Column7.Name = "Column7";
-            // 
-            // Column8
-            // 
-            this.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column8.HeaderText = "提成比例";
-            this.Column8.Name = "Column8";
-            // 
-            // Column9
-            // 
-            this.Column9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column9.HeaderText = "职务津贴";
-            this.Column9.Name = "Column9";
             // 
             // frmSalarySellManager
             // 

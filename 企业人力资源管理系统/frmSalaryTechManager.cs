@@ -45,17 +45,54 @@ namespace 企业人力资源管理系统
         {
             for (int i = 0; i < dt.Rows.Count; i++)
             {
-                dgvMain.Rows[i].Cells[2].Value = Convert.ToDecimal(dgvMain.Rows[i].Cells[3].Value) + Convert.ToDecimal(dgvMain.Rows[i].Cells[4].Value) - Convert.ToDecimal(dgvMain.Rows[i].Cells[5].Value) + Convert.ToDecimal(dgvMain.Rows[i].Cells[6].Value) * Convert.ToDecimal(dgvMain.Rows[i].Cells[7].Value) + Convert.ToDecimal(dgvMain.Rows[i].Cells[8].Value);
-                dt.Rows[i][4] = dgvMain.Rows[i].Cells[2].Value;
-                dt.Rows[i][5] = dgvMain.Rows[i].Cells[3].Value;
-                dt.Rows[i][6] = dgvMain.Rows[i].Cells[4].Value;
-                dt.Rows[i][7] = dgvMain.Rows[i].Cells[5].Value;
-                dt.Rows[i][11] = dgvMain.Rows[i].Cells[6].Value;
-                dt.Rows[i][12] = dgvMain.Rows[i].Cells[7].Value;
-                dt.Rows[i][10] = dgvMain.Rows[i].Cells[8].Value;
+                try
+                {
+                    dgvMain.Rows[i].Cells[2].Value = Convert.ToDecimal(dgvMain.Rows[i].Cells[3].Value) + Convert.ToDecimal(dgvMain.Rows[i].Cells[4].Value) - Convert.ToDecimal(dgvMain.Rows[i].Cells[5].Value) + Convert.ToDecimal(dgvMain.Rows[i].Cells[6].Value) * Convert.ToDecimal(dgvMain.Rows[i].Cells[7].Value) + Convert.ToDecimal(dgvMain.Rows[i].Cells[8].Value);
+                    dt.Rows[i][4] = dgvMain.Rows[i].Cells[2].Value;
+                    dt.Rows[i][5] = dgvMain.Rows[i].Cells[3].Value;
+                    dt.Rows[i][6] = dgvMain.Rows[i].Cells[4].Value;
+                    dt.Rows[i][7] = dgvMain.Rows[i].Cells[5].Value;
+                    dt.Rows[i][11] = dgvMain.Rows[i].Cells[6].Value;
+                    dt.Rows[i][12] = dgvMain.Rows[i].Cells[7].Value;
+                    dt.Rows[i][10] = dgvMain.Rows[i].Cells[8].Value;
+                }
+                catch { }
             }
             SalaryTechManager sal = new SalaryTechManager();
-            sal.save(dt);
+            try
+            {
+                sal.save(dt);
+            }
+            catch
+            { }
+            MessageBox.Show("保存成功！", "提示");
+        }
+
+        private void TextBoxDec_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar != 8 && !Char.IsDigit(e.KeyChar) && e.KeyChar != '.')
+            {
+                e.Handled = true;
+                MessageBox.Show("请输入数字！", "提示");
+            }
+        }
+        private void TextBoxDec(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = false;
+        }
+
+        private void dgvMain_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
+        {
+            if (this.dgvMain.CurrentCell.ColumnIndex == 3 || this.dgvMain.CurrentCell.ColumnIndex == 4 || this.dgvMain.CurrentCell.ColumnIndex == 5 || this.dgvMain.CurrentCell.ColumnIndex == 6 || this.dgvMain.CurrentCell.ColumnIndex == 7 || dgvMain.CurrentCell.ColumnIndex == 8)
+            {
+                e.Control.KeyPress -= new KeyPressEventHandler(TextBoxDec_KeyPress);
+                e.Control.KeyPress += new KeyPressEventHandler(TextBoxDec_KeyPress);
+            }
+            else
+            {
+                e.Control.KeyPress -= new KeyPressEventHandler(TextBoxDec);
+                e.Control.KeyPress += new KeyPressEventHandler(TextBoxDec);
+            }
         }
     }
 }
