@@ -88,6 +88,7 @@
             this.dgvMain.RowTemplate.Height = 23;
             this.dgvMain.Size = new System.Drawing.Size(851, 408);
             this.dgvMain.TabIndex = 2;
+            this.dgvMain.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dgvMain_EditingControlShowing_1);
             // 
             // Column1
             // 

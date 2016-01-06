@@ -78,7 +78,7 @@ namespace 企业人力资源管理系统
             e.Handled = false;
         }
 
-        private void dgvMain_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
+        private void dgvMain_EditingControlShowing_1(object sender, DataGridViewEditingControlShowingEventArgs e)
         {
             if (this.dgvMain.CurrentCell.ColumnIndex == 3 || this.dgvMain.CurrentCell.ColumnIndex == 4 || this.dgvMain.CurrentCell.ColumnIndex == 5 || this.dgvMain.CurrentCell.ColumnIndex == 6 || this.dgvMain.CurrentCell.ColumnIndex == 7)
             {

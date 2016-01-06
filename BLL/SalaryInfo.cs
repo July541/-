@@ -12,7 +12,7 @@ namespace BLL
     {
         public override DataSet show()
         {
-            string sqlstr = "select * from T02 ";
+            string sqlstr = "select * from T02 where F0101 in (select F0101 from T01)";
             SQLiteConnection sqlcon = new SQLiteConnection(connectionString);
             SQLiteCommand sqlcmd = new SQLiteCommand();
             sqlcmd.CommandText = sqlstr;
