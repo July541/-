@@ -21,5 +21,10 @@ namespace 企业人力资源管理系统
         {
 
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

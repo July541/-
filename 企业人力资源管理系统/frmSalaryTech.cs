@@ -54,6 +54,7 @@ namespace 企业人力资源管理系统
                     dt.Rows[i][11] = dgvMain.Rows[i].Cells[6].Value;
                     dt.Rows[i][12] = dgvMain.Rows[i].Cells[7].Value;
                 }
+                catch { }
             }
             SalaryTech sal = new SalaryTech();
             try
