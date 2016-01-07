@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SQLite;
-using Model;
 
 namespace BLL
 {
@@ -13,7 +12,6 @@ namespace BLL
     {
         public override DataSet show()
         {
-            T01 t01 = new T01();
             string sqlstr = "select * from T01 ";
             SQLiteConnection sqlcon = new SQLiteConnection(connectionString);
             SQLiteCommand sqlcmd = new SQLiteCommand();
@@ -68,7 +66,6 @@ namespace BLL
             sqlcmd.ExecuteNonQuery();
             sqlcon.Close();
             return true;
-            //throw new NotImplementedException();
         }
     }
 }

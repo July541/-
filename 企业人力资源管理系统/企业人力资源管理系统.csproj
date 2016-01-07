@@ -213,10 +213,6 @@
       <Project>{d1978a60-d778-4ea4-ac19-3ec9f55230d5}</Project>
       <Name>BLL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Model\Model.csproj">
-      <Project>{583cb8df-0624-4a3d-a0b1-f7c80c85cc03}</Project>
-      <Name>Model</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\1.jpg" />

@@ -1,8 +1,6 @@
 H:\MyC\Csharp\企业人力资源管理系统\SalaryManage\BLL\bin\Debug\BLL.dll
 H:\MyC\Csharp\企业人力资源管理系统\SalaryManage\BLL\bin\Debug\BLL.pdb
-H:\MyC\Csharp\企业人力资源管理系统\SalaryManage\BLL\bin\Debug\Model.dll
 H:\MyC\Csharp\企业人力资源管理系统\SalaryManage\BLL\bin\Debug\System.Data.SQLite.dll
-H:\MyC\Csharp\企业人力资源管理系统\SalaryManage\BLL\bin\Debug\Model.pdb
-H:\MyC\Csharp\企业人力资源管理系统\SalaryManage\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
 H:\MyC\Csharp\企业人力资源管理系统\SalaryManage\BLL\obj\Debug\BLL.dll
 H:\MyC\Csharp\企业人力资源管理系统\SalaryManage\BLL\obj\Debug\BLL.pdb
+H:\MyC\Csharp\企业人力资源管理系统\SalaryManage\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache

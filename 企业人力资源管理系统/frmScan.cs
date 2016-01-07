@@ -8,13 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL;
-using Model;
 
 namespace 企业人力资源管理系统
 {
     public partial class frmScan : Form
     {
-        //List<T01> lst = new List<T01>();
         DataTable dt = new DataTable();
         Global g = new Global();
         private int CurrentRowIndex { get; set; }
@@ -59,7 +57,7 @@ namespace 企业人力资源管理系统
         /// dataGridView 输入验证。
         /// </summary>
         /// <returns></returns>
-        private bool isNull(int row)//TODO: finish others.
+        private bool isNull(int row)
         {
             if (dgvMain.Rows[row].Cells[1].Value.ToString() == "")
             {
@@ -113,22 +111,6 @@ namespace 企业人力资源管理系统
             clmnF0107.Items.Add("技术人员");
             ds = scan.show();
             dt = ds.Tables[0];
-            //foreach(DataRow dr in dt.Rows)
-            //{
-            //    lst.Add(
-            //        new T01()
-            //        {
-            //            F0101 = int.Parse(Convert.ToString(dr[0])),
-            //            F0102 = Convert.ToString(dr[1]),
-            //            F0103 = int.Parse(Convert.ToString(dr[2])),
-            //            F0104 = DateTime.Parse(Convert.ToString(dr[3])),
-            //            F0105 = Convert.ToString(dr[4]),
-            //            F0106 = Convert.ToString(dr[5]),
-            //            F0107 = Convert.ToString(dr[6]),
-            //            F0108 = Convert.ToString(dr[7])
-            //        }
-            //        );
-            //}
             this.dgvMain.DataSource = dt;
         }
 

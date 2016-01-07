@@ -23,10 +23,8 @@ H:\MyC\Csharp\企业人力资源管理系统\SalaryManage\企业人力资源管�
 H:\MyC\Csharp\企业人力资源管理系统\SalaryManage\企业人力资源管理系统\bin\Debug\企业人力资源管理系统.exe
 H:\MyC\Csharp\企业人力资源管理系统\SalaryManage\企业人力资源管理系统\bin\Debug\企业人力资源管理系统.pdb
 H:\MyC\Csharp\企业人力资源管理系统\SalaryManage\企业人力资源管理系统\bin\Debug\BLL.dll
-H:\MyC\Csharp\企业人力资源管理系统\SalaryManage\企业人力资源管理系统\bin\Debug\Model.dll
 H:\MyC\Csharp\企业人力资源管理系统\SalaryManage\企业人力资源管理系统\bin\Debug\System.Data.SQLite.dll
 H:\MyC\Csharp\企业人力资源管理系统\SalaryManage\企业人力资源管理系统\bin\Debug\BLL.pdb
-H:\MyC\Csharp\企业人力资源管理系统\SalaryManage\企业人力资源管理系统\bin\Debug\Model.pdb
 H:\MyC\Csharp\企业人力资源管理系统\SalaryManage\企业人力资源管理系统\obj\Debug\企业人力资源管理系统.csprojResolveAssemblyReference.cache
 H:\MyC\Csharp\企业人力资源管理系统\SalaryManage\企业人力资源管理系统\obj\Debug\企业人力资源管理系统.frmInfoSelect.resources
 H:\MyC\Csharp\企业人力资源管理系统\SalaryManage\企业人力资源管理系统\obj\Debug\企业人力资源管理系统.frmManagerInfo.resources

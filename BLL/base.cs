@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SQLite;
-using Model;
 
 namespace BLL
 {
@@ -16,7 +15,5 @@ namespace BLL
         public abstract bool update();
         public abstract bool delete(string where);
         public static string connectionString = "Data Source = ./SalaryManage.db;";
-
-
     }
 }

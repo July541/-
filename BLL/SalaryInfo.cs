@@ -50,7 +50,6 @@ namespace BLL
             sqlcmd.ExecuteNonQuery();
             sqlcon.Close();
             return true;
-            //throw new NotImplementedException();
         }
     }
 }
